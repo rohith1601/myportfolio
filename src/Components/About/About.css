@@ -1,0 +1,122 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin:0px 160px;
+}
+.about-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-left{
+    margin-bottom: 50px;
+}
+.about-left img{
+    height:450px;
+    width: 330px;
+}
+.about-section{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 20px;
+}
+.about-para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.about-right{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.about-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-skill{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    transition: 0.3;
+
+}
+.about-skill p{
+    min-width: 120px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.about-skill hr{
+    width: 80%;
+    height: 8px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(162,41,227,1) 16%, rgba(0,212,255,1) 100%);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+.about-skill:hover{
+    transform: scale(1.03);
+    transition: 0.3;
+    cursor: pointer;
+}
+.tab-titles
+{
+    display: flex;
+}
+.tab-links
+{
+    position:relative;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 50px;
+    cursor: pointer;
+}
+.tab-links::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: rgb(6, 66, 103);
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: aqua;
+    font-size: 18px;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
+@media(max-width:768px)
+{
+    .about{
+        margin: 50px 70px;
+        gap: 20px;
+        align-items: start;
+    }
+    .about-title{
+        font-size: 20px;
+        padding: 0;
+    }
+}

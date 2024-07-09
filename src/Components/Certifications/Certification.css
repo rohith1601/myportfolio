@@ -1,0 +1,45 @@
+.certificates
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.sub-title{
+    position:relative;
+}
+.sub-title h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.certificate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    border:2px solid white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.certificates-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap:40px;
+    margin-bottom: 80px;
+}
+.certificates-list h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+.certificate p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.certificate:hover{
+    transform: scale(1.05);
+    border: 2px solid rgb(62, 104, 222);
+}

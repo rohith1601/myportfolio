@@ -1,0 +1,108 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 50px;
+  gap: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.nav-menu li {
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-menu p {
+  padding-bottom: 5px; /* Added padding to ensure underline has space */
+  position: relative;
+  transition: transform 0.5s, width 0.3s; /* Smooth scaling and underline transition */
+}
+
+.nav-menu p::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: rgb(148, 46, 189);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-menu li.active p::after,
+.nav-menu li:hover p::after {
+  width: 100%;
+}
+
+.nav-menu li:hover p {
+  transform: scale(1.1);
+}
+
+.nav-connect {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(162,41,227,1) 16%, rgba(0,212,255,1) 100%);
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-mob-close {
+  display: none;
+}
+.nav-mob-open{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 20px;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 240px;
+    width: 30px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 35px;
+    background-color: rgb(27, 26, 25);
+    width: 300px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5;
+    right: -350px;
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+  }
+}
