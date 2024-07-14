@@ -27,7 +27,7 @@
 }
 .certificates-list{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr ;
     gap:40px;
     margin-bottom: 80px;
 }
@@ -42,4 +42,25 @@
 .certificate:hover{
     transform: scale(1.05);
     border: 2px solid rgb(62, 104, 222);
+}
+@media(max-width:768px)
+{
+    .certificates{
+        margin: 80px 20px;
+    }
+    .sub-title h1{
+        font-size: 30px;
+    }
+    .certificates-list{
+        grid-template-columns: 1fr;
+    }
+    .certificate{
+        padding: 20px;
+    }
+    .certificates-list h2{
+        font-size: 20px;
+    }
+    .certificate p{
+        font-size: 14px;
+    }
 }

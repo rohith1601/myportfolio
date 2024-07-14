@@ -88,3 +88,28 @@
     transform: scale(1.03);
     background-color: #2e4cbf;
 }
+@media(max-width:768px)
+{
+    .contact{
+        margin: 80px 20px;
+    }
+    .sub-title h1{
+        font-size: 30px;
+    }
+    .contact-section{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contact-left h1{
+        font-size: 50px;
+    }
+    .contact-left p{
+        max-width: 300px;
+    }
+    .contact-right input{
+        width: 300px;
+    }
+    .contact-right textarea{
+        width: 300px;
+    }
+}
